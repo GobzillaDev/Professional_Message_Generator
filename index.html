@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Message Generator</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="content-wrapper">
+
+        <header>
+            <h1>Professional Message Generator</h1>
+            <p>Quickly create a personalized professional message</p>
+        </header>
+        
+        <main>
+            <form>
+
+                <div class="form-group">
+                    <label for="message_type">Message type&nbsp;:</label>
+                    <select name="message_type" id="message_type">
+                        <option value="collaboration">Collaboration</option>
+                        <option value="offer">Service offer</option>
+                        <option value="contact">Contact initiation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipient_name">Recipient's name&nbsp;:</label>
+                    <input type="text" name="recipient_name" id="recipient_name" placeholder="Ex : Alex">
+                </div>
+
+                <div class="form-group">
+                    <label for="field">Field / Subject&nbsp; :</label>
+                    <input type="text" name="field" id="field" placeholder="Ex : Digital marketing">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your name&nbsp;:</label>
+                    <input type="text" name="name" id="name" placeholder="Ex : Paul">
+                </div>
+        
+                <input type="button" class="generate_button" onclick="generateMessage()" name="generate_button" value="Generate message">
+            </form>
+        
+            <div id="output"></div>
+            <button id="copy_button" onclick="copyMessage()">Copy message</button>
+        
+            <div id="popup" class="hidden"><p>Message copied to clipboard!</p></div>
+        </main>
+
+    </div>
+
+    <footer>
+        <p>Created by Paul G.</p>
+    </footer>
+
+</body>
+
+<script>
+
+    function generateMessage() {
+        const type = document.getElementById('message_type').value;
+        const recipient_name = document.getElementById('recipient_name').value.trim();
+        const field = document.getElementById('field').value.trim();
+        const name = document.getElementById('name').value.trim();
+
+        let message = "";
+
+        if (type === "collaboration") {
+            message = `Hello ${recipient_name}, \n\n I'm reaching out to discuss the possibility of a collaboration in the field of ${field}. I believe our respective areas of expertise align well, and I'd love to explore how we could potentially work together. \n\n Best regards, \n${name}`;
+        } else if (type === "offer") {
+            message = `Hello ${recipient_name}, \n\n I'm contacting you regarding an opportunity for collaboration in the field of ${field}. I believe there's great potential for us to combine our efforts and create something impactful. \n\n Best regards, \n${name}`;
+        } else {
+            message = `Hello ${recipient_name}, \n\n I'm reaching out to introduce myself and explore potential opportunities in the field of ${field}. I'd love to connect and see how we might collaborate in the future. \n\n Best regards, \n${name}`
+        }
+
+        document.getElementById('output').innerText = message;
+    }
+
+    function copyMessage() {
+        const output = document.getElementById('output');
+        const text = output.textContent;
+
+        navigator.clipboard.writeText(text)
+        .then(() => {
+            showPopup();
+        })
+    }
+
+    function showPopup() {
+        const popup = document.getElementById('popup');
+        popup.className = 'show';
+
+        setTimeout(() => {
+            popup.className = popup.className.replace('show', '');
+        }, 3000);
+    }
+
+</script>
+
+</html>
