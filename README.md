@@ -13,10 +13,3 @@ Built for students, freelancers, and professionals who want to create quick and 
 ## Demo
 
 (Insert link here once deployed)
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/pro-message-generator.git
-
