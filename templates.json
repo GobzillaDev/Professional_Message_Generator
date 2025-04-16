@@ -1,0 +1,19 @@
+{
+    "collaboration": [
+      "Hello {{recipient}},\n\nI'm reaching out to discuss a possible collaboration in {{field}}. Our expertise might complement each other nicely.\n\nBest regards,\n{{sender}}",
+      "Hi {{recipient}},\n\nI'd love to connect and explore a partnership in {{field}}. Let me know if you're open to a quick chat.\n\nCheers,\n{{sender}}",
+      "Dear {{recipient}},\n\nI admire your work in {{field}} and would be delighted to explore how we might collaborate.\n\nKind regards,\n{{sender}}"
+    ],
+    "offer": [
+      "Hello {{recipient}},\n\nI offer services in {{field}} and thought it could be relevant for your current needs. Let's connect!\n\nRegards,\n{{sender}}",
+      "Hi {{recipient}},\n\nAs a specialist in {{field}}, I wanted to let you know that I'm available to support your upcoming projects.\n\nTalk soon,\n{{sender}}",
+      "Dear {{recipient}},\n\nIf you're looking for help in {{field}}, I'd love to offer my services. Let's schedule a call.\n\nAll the best,\n{{sender}}"
+    ],
+    "contact": [
+      "Hi {{recipient}},\n\nI'm reaching out to introduce myself. I'm active in {{field}}, and I'd love to exchange ideas!\n\nBest,\n{{sender}}",
+      "Hello {{recipient}},\n\nJust a quick note to say hi! I'm working in {{field}} and would love to connect.\n\nRegards,\n{{sender}}",
+      "Dear {{recipient}},\n\nI hope this message finds you well. I wanted to connect regarding our shared interest in {{field}}.\n\nSincerely,\n{{sender}}"
+    ]
+}
+  
+  

@@ -59,46 +59,6 @@
 
 </body>
 
-<script>
-
-    function generateMessage() {
-        const type = document.getElementById('message_type').value;
-        const recipient_name = document.getElementById('recipient_name').value.trim();
-        const field = document.getElementById('field').value.trim();
-        const name = document.getElementById('name').value.trim();
-
-        let message = "";
-
-        if (type === "collaboration") {
-            message = `Hello ${recipient_name}, \n\n I'm reaching out to discuss the possibility of a collaboration in the field of ${field}. I believe our respective areas of expertise align well, and I'd love to explore how we could potentially work together. \n\n Best regards, \n${name}`;
-        } else if (type === "offer") {
-            message = `Hello ${recipient_name}, \n\n I'm contacting you regarding an opportunity for collaboration in the field of ${field}. I believe there's great potential for us to combine our efforts and create something impactful. \n\n Best regards, \n${name}`;
-        } else {
-            message = `Hello ${recipient_name}, \n\n I'm reaching out to introduce myself and explore potential opportunities in the field of ${field}. I'd love to connect and see how we might collaborate in the future. \n\n Best regards, \n${name}`
-        }
-
-        document.getElementById('output').innerText = message;
-    }
-
-    function copyMessage() {
-        const output = document.getElementById('output');
-        const text = output.textContent;
-
-        navigator.clipboard.writeText(text)
-        .then(() => {
-            showPopup();
-        })
-    }
-
-    function showPopup() {
-        const popup = document.getElementById('popup');
-        popup.className = 'show';
-
-        setTimeout(() => {
-            popup.className = popup.className.replace('show', '');
-        }, 3000);
-    }
-
-</script>
+<script type="text/javascript" src="script.js"></script>
 
 </html>
